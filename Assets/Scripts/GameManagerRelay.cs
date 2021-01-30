@@ -1,7 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class GameManagerRelay : MonoBehaviour
@@ -34,7 +31,15 @@ public class GameManagerRelay : MonoBehaviour
     //UI related relay method
     public void GetPauseMenu()
     {
+        Time.timeScale = 0;
+        //Time.fixedDeltaTime = 0;
         gm.GetPauseMenu();
+    }
+
+    public void ResumeGame()
+    {
+        //Time.fixedDeltaTime = 1;
+        Time.timeScale = 1;
     }
 
     public void GetOptionsMenu()
