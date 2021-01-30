@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d067afb121ec34fbb4732840cbdc0d, type: 3}
+  m_Name: TannerQuips
+  m_EditorClassIdentifier: 
+  characterName: Tanner
+  characterSplash: {fileID: 21300000, guid: 79302d43bcadd7749986b320d30cc8e8, type: 3}
+  introductions:
+  - Hey there. Come here often? Let me show you around.
+  - You look a llittle lost. Let me show you the ropes.
+  nakedResponses:
+  - Now things are getting interesting.
+  - Is it getting hot in here, or is it just me?
+  defeatResponses:
+  - I'm impressed, want to go again?
+  - What a ride, ready for a rematch?
+  seducingResponses:
+  - Look what I found! A tender area.
+  - Oops, you dropped something.
+  victoryResponses:
+  - I thought you'd last longer than that.
+  - if that's all I'll be at the bar.
