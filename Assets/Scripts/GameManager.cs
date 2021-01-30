@@ -38,10 +38,4 @@ public class GameManager : Singleton<GameManager>
     {
         round = roundNum;
     }
-
-    //Logic for application quit
-    private void OnApplicationQuit()
-    {
-        
-    }
 }
