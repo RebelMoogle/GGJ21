@@ -7,6 +7,8 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController2D controller;
 	public Animator animator;
 
+	public float crossFade = 1.0f;
+
 	public float runSpeed = 40f;
 
 	float horizontalMove = 0f;
@@ -41,12 +43,8 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
 		{
-			animator.Play("party");
-		} else if (Input.GetButtonUp("Fire1"))
-		{
-			animator.Play("Idle");
+			animator.CrossFade("punch", crossFade, -1, 0f);
 		}
-
 	}
 
 	public void OnLanding ()
