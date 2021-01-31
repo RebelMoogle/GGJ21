@@ -72,8 +72,7 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetButtonDown(attackInput1))
 		{
-			animator.CrossFade("Punch", crossFade, -1, 0f);
-			punchEm.DoAttack("Punch", controller.IsFacingRight());
+			punchEm.DoAttack("Punch", controller.IsFacingRight(), animator, crossFade);
 		}
 	}
 
@@ -97,7 +96,6 @@ public class CharacterMovement : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-
 		// Move our character
 		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
 		jump = false;

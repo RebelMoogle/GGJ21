@@ -72,8 +72,7 @@ public class AiMovement : MonoBehaviour
 
         if (isPunching)
         {
-            animator.CrossFade("Punch", crossFade, -1, 0f);
-            punchEm.DoAttack("Punch", controller.IsFacingRight());
+            punchEm.DoAttack("Punch", controller.IsFacingRight(), animator, crossFade);
         }
     }
 
