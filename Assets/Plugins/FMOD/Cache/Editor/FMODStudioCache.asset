@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: Assets/20210130 Global Game jam Jan 2021_FMOD implementation/Build/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 637476441672543027
+  lastModified: 637476853257391929
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -244,7 +244,7 @@ MonoBehaviour:
   - {fileID: 3165131564133168782}
   StringsBanks:
   - {fileID: 5351264789474646878}
-  stringsBankWriteTime: 637476441672483061
+  stringsBankWriteTime: 637476853257351956
   cacheVersion: 6
 --- !u!114 &915603051887137389
 MonoBehaviour:
@@ -399,7 +399,7 @@ MonoBehaviour:
   Path: Assets/20210130 Global Game jam Jan 2021_FMOD implementation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637476441672393129
+  lastModified: 637476853257321977
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -483,7 +483,7 @@ MonoBehaviour:
   Path: Assets/20210130 Global Game jam Jan 2021_FMOD implementation/Build/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 637476441672523036
+  lastModified: 637476853257361947
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -525,7 +525,7 @@ MonoBehaviour:
   Path: Assets/20210130 Global Game jam Jan 2021_FMOD implementation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637476441672483061
+  lastModified: 637476853257351956
   LoadResult: 0
   FileSizes:
   - Name: Desktop
