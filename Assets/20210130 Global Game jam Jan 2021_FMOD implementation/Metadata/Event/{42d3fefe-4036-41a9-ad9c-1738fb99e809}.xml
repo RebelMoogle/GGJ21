@@ -35,7 +35,11 @@
 			<destination>{51f7dccc-95de-4eaf-ba17-3c58f5502b1d}</destination>
 		</relationship>
 		<relationship name="banks">
+<<<<<<< Updated upstream
 			<destination>{69dda393-b0bf-42af-b092-43e7fc44234f}</destination>
+=======
+			<destination>{75a9498f-0ea5-47aa-95d0-dcfa714fa39d}</destination>
+>>>>>>> Stashed changes
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{05b15e43-af12-43bb-9fc9-df66bb8e93a1}">
@@ -59,7 +63,11 @@
 			<destination>{a447da7b-9b13-4d64-b3e1-a35657cd4ace}</destination>
 		</relationship>
 		<relationship name="output">
+<<<<<<< Updated upstream
 			<destination>{740f7f63-9e68-4b5d-aafe-2fb1752219be}</destination>
+=======
+			<destination>{51e656fb-b124-4e53-bdd3-0f336286941d}</destination>
+>>>>>>> Stashed changes
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{3b2c9aa8-b6d0-4fbb-89d4-0be8bcabe3b1}" />
@@ -80,6 +88,12 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{bffe7a9b-b809-4d77-9595-5ac24e3dbb45}">
+<<<<<<< Updated upstream
+=======
+		<property name="volume">
+			<value>10</value>
+		</property>
+>>>>>>> Stashed changes
 		<relationship name="effectChain">
 			<destination>{fa85e9d7-19c4-4010-b77e-c5a275c0f535}</destination>
 		</relationship>
