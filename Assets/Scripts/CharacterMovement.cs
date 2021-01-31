@@ -10,6 +10,9 @@ public class CharacterMovement : MonoBehaviour
 	public PunchEm punchEm;
 	public Animator animator;
 
+	[Range(1,2)]
+	public int playerNumber = 1;
+
 	public float crossFade = 1.0f;
 
 	public float runSpeed = 40f;
@@ -18,10 +21,25 @@ public class CharacterMovement : MonoBehaviour
 	bool jump = false;
 	bool crouch = false;
 
+	string moveInput = "Horizontal";
+	string jumpInput = "Jump";
+	string crouchInput = "Crouch";
+	string attackInput1 = "Punch";
+
+
+
     private void Start() {
         controller.OnLandEvent.AddListener(this.OnLanding);
         controller.OnCrouchEvent.AddListener(this.OnCrouching);
 		receiveDamage.damageEvent.AddListener(this.OnDamage);
+
+		if (playerNumber != 1) {
+			controller.Flip();
+			moveInput = $"{moveInput}-{playerNumber}";
+			jumpInput = $"{jumpInput}-{playerNumber}";
+			crouchInput = $"{crouchInput}-{playerNumber}";
+			attackInput1 = $"{attackInput1}-{playerNumber}";
+		}
     }
 
     // Update is called once per frame
@@ -33,33 +51,29 @@ public class CharacterMovement : MonoBehaviour
 			return;
 		}
 
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+		horizontalMove = Input.GetAxisRaw(moveInput) * runSpeed;
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-		if (Input.GetButtonDown("Jump"))
+		if (Input.GetButtonDown(jumpInput))
 		{
 			jump = true;
 			animator.SetBool("IsJumping", true);
 		}
 
-		if (Input.GetButtonDown("Crouch"))
+		if (Input.GetButtonDown(crouchInput))
 		{
 			crouch = true;
-		} else if (Input.GetButtonUp("Crouch"))
+		} else if (Input.GetButtonUp(crouchInput))
 		{
 			crouch = false;
 		}
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(attackInput1))
 		{
 			animator.CrossFade("Punch", crossFade, -1, 0f);
 			punchEm.DoAttack("Punch", controller.IsFacingRight());
-		}
-
-		if (Input.GetButtonDown("Fire2"))
-		{
-			receiveDamage.receiveDamage(100);
 		}
 	}
 

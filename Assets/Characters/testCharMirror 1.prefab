@@ -1505,7 +1505,7 @@ GameObject:
   - component: {fileID: 5074426939364236356}
   - component: {fileID: 6116661540089332505}
   - component: {fileID: 6116661540089332517}
-  - component: {fileID: 2075008535957996591}
+  - component: {fileID: 5106579740653107368}
   - component: {fileID: 6116661540089332516}
   - component: {fileID: 6116661540089332506}
   - component: {fileID: 6116661540089332507}
@@ -1579,7 +1579,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.20927823, y: 1.1478089}
+  m_Offset: {x: 0.19332492, y: 2.8229063}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1590,10 +1590,10 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.557322, y: 1.932936}
+  m_Size: {x: 1.7009017, y: 3.0496678}
   m_EdgeRadius: 0
---- !u!61 &2075008535957996591
-BoxCollider2D:
+--- !u!58 &5106579740653107368
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1605,19 +1605,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17404974, y: 3.2787523}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.19542825, y: 0.99708164}
   serializedVersion: 2
-  m_Size: {x: 1.3480995, y: 2.3234622}
-  m_EdgeRadius: 0
+  m_Radius: 0.73531115
 --- !u!95 &6116661540089332516
 Animator:
   serializedVersion: 3
@@ -1679,6 +1669,7 @@ MonoBehaviour:
   receiveDamage: {fileID: 6766105734107358786}
   punchEm: {fileID: 3441970242092016218}
   animator: {fileID: 6116661540089332516}
+  playerNumber: 1
   crossFade: 0.2
   runSpeed: 40
 --- !u!114 &6116661540089332504
@@ -1739,4 +1730,4 @@ MonoBehaviour:
     range: 2
     areaOfEffect: 0.1
     damage: 10
-    origin: {fileID: 1115694076705522146}
+    origin: {fileID: 2785153125212705917}
