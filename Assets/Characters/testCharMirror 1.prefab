@@ -1731,3 +1731,8 @@ MonoBehaviour:
     areaOfEffect: 0.1
     damage: 10
     origin: {fileID: 2785153125212705917}
+  - attackName: Punch
+    range: 2
+    areaOfEffect: 0.1
+    damage: 10
+    origin: {fileID: 2785153125212705917}
