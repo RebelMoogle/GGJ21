@@ -85,8 +85,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2523659611082410376}
-  m_LocalRotation: {x: 0, y: 0, z: 0.057770304, w: 0.9983299}
-  m_LocalPosition: {x: 0.8010282, y: -0.0000004329139, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.05776997, w: 0.99833}
+  m_LocalPosition: {x: 0.8010282, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8533168379217001786}
@@ -578,9 +578,10 @@ GameObject:
   - component: {fileID: 8533168379984210260}
   - component: {fileID: 9182647759053753358}
   - component: {fileID: 3687774896036925334}
+  - component: {fileID: 2898158386650142391}
   m_Layer: 0
   m_Name: AICHAR
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -784,6 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 8533168379984210262}
   receiveDamage: {fileID: 9182647759053753358}
+  punchEm: {fileID: 2898158386650142391}
   animator: {fileID: 8533168379984210280}
   crossFade: 0.2
   runSpeed: 40
@@ -792,6 +794,24 @@ MonoBehaviour:
   startFlipped: 1
   stepSpeed: 1
   RepeatActionTime: 1
+--- !u!114 &2898158386650142391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856923097836385223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6975d5379ae6164785ff80030d8b5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleAttacks:
+  - attackName: Punch
+    range: 2
+    areaOfEffect: 0.1
+    damage: 10
+    origin: {fileID: 3310961525993647022}
 --- !u!1 &8533168378676232532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1023,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8533168379217001789}
-  m_LocalRotation: {x: -0, y: -0, z: -0.07422186, w: 0.9972418}
+  m_LocalRotation: {x: -0, y: -0, z: -0.07422152, w: 0.99724185}
   m_LocalPosition: {x: 0.63, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1553,8 +1573,8 @@ MonoBehaviour:
   - {fileID: 3310961525993647022}
   - {fileID: 301602842265992753}
   m_Bounds:
-    m_Center: {x: 0.37099764, y: 0.00016498566, z: 0}
-    m_Extent: {x: 0.2975899, y: 0.8741219, z: 0}
+    m_Center: {x: 0.3709977, y: 0.00016498566, z: 0}
+    m_Extent: {x: 0.29758996, y: 0.87412196, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &8862953786258892898

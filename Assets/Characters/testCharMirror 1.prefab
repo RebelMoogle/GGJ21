@@ -1511,6 +1511,7 @@ GameObject:
   - component: {fileID: 6116661540089332507}
   - component: {fileID: 6116661540089332504}
   - component: {fileID: 6766105734107358786}
+  - component: {fileID: 3441970242092016218}
   m_Layer: 0
   m_Name: testCharMirror 1
   m_TagString: Player
@@ -1676,6 +1677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 6116661540089332506}
   receiveDamage: {fileID: 6766105734107358786}
+  punchEm: {fileID: 3441970242092016218}
   animator: {fileID: 6116661540089332516}
   crossFade: 0.2
   runSpeed: 40
@@ -1720,3 +1722,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bc2069b70e72f4dbf0eb2c2825e4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3441970242092016218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344783818121353611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6975d5379ae6164785ff80030d8b5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possibleAttacks:
+  - attackName: Punch
+    range: 2
+    areaOfEffect: 0.1
+    damage: 10
+    origin: {fileID: 1115694076705522146}

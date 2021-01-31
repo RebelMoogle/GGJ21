@@ -7,6 +7,7 @@ public class AiMovement : MonoBehaviour
 {
     public CharacterController2D controller;
 	public ReceiveDamage receiveDamage;
+    public PunchEm punchEm;
 	public Animator animator;
 
 	public float crossFade = 0.2f;
@@ -75,6 +76,7 @@ public class AiMovement : MonoBehaviour
         if (isPunching)
         {
             animator.CrossFade("Punch", crossFade, -1, 0f);
+            punchEm.DoAttack("Punch", controller.IsFacingRight());
         }
     }
 
@@ -90,7 +92,7 @@ public class AiMovement : MonoBehaviour
 
 	private void OnDamage(HealthState healthState)
     {
-        animator.CrossFade("Damaged", crossFade, -1, 0f);
+        animator.CrossFade("Damage", crossFade, -1, 0f);
 		if (healthState == HealthState.Low) {
 			sprite.color = new Color(1, 0, 0, 1);
 		} else if (healthState == HealthState.Knockout) {
