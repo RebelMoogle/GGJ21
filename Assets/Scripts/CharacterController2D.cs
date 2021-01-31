@@ -26,7 +26,9 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
-	private void Awake()
+    public bool IsFacingRight() { return m_FacingRight; }
+
+    private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
@@ -113,7 +115,7 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 
-	private void Flip()
+	public void Flip()
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
