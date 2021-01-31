@@ -32,7 +32,11 @@
 			<destination>{05d85717-7740-43e5-ac5a-60d51927e41c}</destination>
 		</relationship>
 		<relationship name="banks">
+<<<<<<< Updated upstream
 			<destination>{ff0820e7-b607-4362-ab57-5629bac0f9fe}</destination>
+=======
+			<destination>{75a9498f-0ea5-47aa-95d0-dcfa714fa39d}</destination>
+>>>>>>> Stashed changes
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{8051f25f-1a38-42b7-a304-a41617ea0e53}">
@@ -53,7 +57,11 @@
 			<destination>{4d216479-86dc-429b-8d6f-b53c152040e2}</destination>
 		</relationship>
 		<relationship name="output">
+<<<<<<< Updated upstream
 			<destination>{740f7f63-9e68-4b5d-aafe-2fb1752219be}</destination>
+=======
+			<destination>{ddce6b79-0dde-4ea0-88aa-fc070155fdfd}</destination>
+>>>>>>> Stashed changes
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{f5326451-ca86-48f5-800e-2a8c0ae08c88}" />

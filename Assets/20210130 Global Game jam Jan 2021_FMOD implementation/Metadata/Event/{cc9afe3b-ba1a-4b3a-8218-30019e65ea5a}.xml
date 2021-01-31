@@ -35,7 +35,11 @@
 			<destination>{e7acc181-0549-47d2-be61-1fc36d8fe799}</destination>
 		</relationship>
 		<relationship name="banks">
+<<<<<<< Updated upstream
 			<destination>{69dda393-b0bf-42af-b092-43e7fc44234f}</destination>
+=======
+			<destination>{75a9498f-0ea5-47aa-95d0-dcfa714fa39d}</destination>
+>>>>>>> Stashed changes
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{f2a0693b-158f-48ee-89c0-891341561df9}">
@@ -59,7 +63,11 @@
 			<destination>{4e282db6-b5e2-4a09-bb21-f77ac8d83815}</destination>
 		</relationship>
 		<relationship name="output">
+<<<<<<< Updated upstream
 			<destination>{740f7f63-9e68-4b5d-aafe-2fb1752219be}</destination>
+=======
+			<destination>{137a5d86-165a-4569-9fff-7819db6267ff}</destination>
+>>>>>>> Stashed changes
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{5347a377-f369-4369-99d8-db965d61d5a2}" />
@@ -117,6 +125,10 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{66b52fd2-40fb-4adc-84f1-551f8bd3f7fc}">
 		<relationship name="effects">
+<<<<<<< Updated upstream
+=======
+			<destination>{7c2f0ef6-879f-4932-8623-91282bbd1909}</destination>
+>>>>>>> Stashed changes
 			<destination>{c08b9543-39c3-488f-966f-fb94a7b59a70}</destination>
 		</relationship>
 	</object>
@@ -133,6 +145,27 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{77a3c18f-d380-47ec-84ef-5159ba2b299e}" />
+<<<<<<< Updated upstream
 	<object class="MixerBusFader" id="{c08b9543-39c3-488f-966f-fb94a7b59a70}" />
 	<object class="MixerBusFader" id="{1f2767f1-de86-44a3-8b97-c5de1b6315f5}" />
+=======
+	<object class="PitchShifterEffect" id="{7c2f0ef6-879f-4932-8623-91282bbd1909}">
+		<property name="pitch">
+			<value>0.979999959</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{c919ed70-fb9a-40ca-9bc1-fac358d042d3}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusFader" id="{c08b9543-39c3-488f-966f-fb94a7b59a70}" />
+	<object class="MixerBusFader" id="{1f2767f1-de86-44a3-8b97-c5de1b6315f5}" />
+	<object class="RandomizerModulator" id="{c919ed70-fb9a-40ca-9bc1-fac358d042d3}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>25</value>
+		</property>
+	</object>
+>>>>>>> Stashed changes
 </objects>

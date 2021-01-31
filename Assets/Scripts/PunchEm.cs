@@ -47,7 +47,7 @@ public class PunchEm : MonoBehaviour
                     }
                 }
             };
-            if(chosenAtk.soundClip != string.Empty) { FMODUnity.RuntimeManager.PlayOneShot(chosenAtk.soundClip); }
+            if(chosenAtk.soundClip != string.Empty) { AudioController.Instance.PlayOneshotClip(chosenAtk.soundClip); }
         } else {
             Debug.Log($"Attack with name {attackName} not found");
         }

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.01.00">
 	<object class="MixerMaster" id="{740f7f63-9e68-4b5d-aafe-2fb1752219be}">
+<<<<<<< Updated upstream
+=======
+		<property name="volume">
+			<value>-9.5</value>
+		</property>
+>>>>>>> Stashed changes
 		<property name="name">
 			<value>Master Bus</value>
 		</property>

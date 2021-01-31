@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
 	public ReceiveDamage receiveDamage;
 	public PunchEm punchEm;
 	public Animator animator;
+	public StudioEventEmitter walksound;
 
 	[Range(1,2)]
 	public int playerNumber = 1;
@@ -30,6 +31,7 @@ public class CharacterMovement : MonoBehaviour
 
 
     private void Start() {
+		//walksound = GetComponent<StudioEventEmitter>();
         controller.OnLandEvent.AddListener(this.OnLanding);
         controller.OnCrouchEvent.AddListener(this.OnCrouching);
 		receiveDamage.damageEvent.AddListener(this.OnDamage);
@@ -61,7 +63,7 @@ public class CharacterMovement : MonoBehaviour
 		{
 			jump = true;
 			animator.SetBool("IsJumping", true);
-			RuntimeManager.PlayOneShot("event:/Character/Jump");
+			AudioController.Instance.PlayOneshotClip("jump");
 		}
 
 		if (Input.GetButtonDown(crouchInput))
@@ -77,6 +79,7 @@ public class CharacterMovement : MonoBehaviour
 		{
 			animator.CrossFade("Punch", crossFade, -1, 0f);
 			punchEm.DoAttack("Punch", controller.IsFacingRight());
+			AudioController.Instance.PlayOneshotClip("punch");
 		}
 
 		if (Input.GetButtonDown("Fire2"))
