@@ -58,7 +58,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
 		{
 			animator.CrossFade("Punch", crossFade, -1, 0f);
-			punchEm.DoAttack("Punch", controller.IsFacingRight(dw));
+			punchEm.DoAttack("Punch", controller.IsFacingRight());
 		}
 
 		if (Input.GetButtonDown("Fire2"))
