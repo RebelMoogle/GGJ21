@@ -14,8 +14,6 @@ public class CharacterMovement : MonoBehaviour
 
 	public float runSpeed = 40f;
 
-	SpriteRenderer sprite;
-
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
@@ -24,8 +22,6 @@ public class CharacterMovement : MonoBehaviour
         controller.OnLandEvent.AddListener(this.OnLanding);
         controller.OnCrouchEvent.AddListener(this.OnCrouching);
 		receiveDamage.damageEvent.AddListener(this.OnDamage);
-
-		sprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -80,20 +76,16 @@ public class CharacterMovement : MonoBehaviour
 	private void OnDamage(HealthState healthState)
     {
         animator.CrossFade("Damaged", crossFade, -1, 0f);
-		if (healthState == HealthState.Low) {
-			sprite.color = new Color(1, 0, 0, 1);
-		} else if (healthState == HealthState.Knockout) {
+		if (healthState == HealthState.Knockout) {
 			animator.CrossFade("KnockOut", crossFade);
 		}
     }
 
 	void FixedUpdate ()
 	{
-		if(GameManager.Instance.gameState != GameManager.GameState.PauseMenu)
-        {
-			// Move our character
-			controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-			jump = false;
-		}
+
+		// Move our character
+		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+		jump = false;
 	}
 }

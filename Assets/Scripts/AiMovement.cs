@@ -25,8 +25,6 @@ public class AiMovement : MonoBehaviour
 
     float timePassed = 0.0f;
 
-	SpriteRenderer sprite;
-
 	float horizontalMove = 0f;
 	bool jump = false;
 	bool crouch = false;
@@ -36,7 +34,6 @@ public class AiMovement : MonoBehaviour
         controller.OnCrouchEvent.AddListener(this.OnCrouching);
 		receiveDamage.damageEvent.AddListener(this.OnDamage);
 
-		sprite = GetComponent<SpriteRenderer>();
         if(startFlipped) {
             controller.Flip();
         }
@@ -92,10 +89,8 @@ public class AiMovement : MonoBehaviour
 
 	private void OnDamage(HealthState healthState)
     {
-        animator.CrossFade("Damage", crossFade, -1, 0f);
-		if (healthState == HealthState.Low) {
-			sprite.color = new Color(1, 0, 0, 1);
-		} else if (healthState == HealthState.Knockout) {
+        animator.CrossFade("Damaged", crossFade, -1, 0f);
+		if (healthState == HealthState.Knockout) {
 			animator.CrossFade("KnockOut", crossFade);
 		}
     }
