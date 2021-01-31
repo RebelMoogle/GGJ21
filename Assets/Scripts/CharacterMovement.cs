@@ -89,8 +89,11 @@ public class CharacterMovement : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		// Move our character
-		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-		jump = false;
+		if(GameManager.Instance.gameState != GameManager.GameState.PauseMenu)
+        {
+			// Move our character
+			controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+			jump = false;
+		}
 	}
 }
