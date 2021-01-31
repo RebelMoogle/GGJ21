@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -60,12 +61,14 @@ public class CharacterMovement : MonoBehaviour
 		{
 			jump = true;
 			animator.SetBool("IsJumping", true);
+			RuntimeManager.PlayOneShot("event:/Character/Jump");
 		}
 
 		if (Input.GetButtonDown(crouchInput))
 		{
 			crouch = true;
-		} else if (Input.GetButtonUp(crouchInput))
+			RuntimeManager.PlayOneShot("event:/Character/crouch");
+		} else if (Input.GetButtonUp("Crouch"))
 		{
 			crouch = false;
 		}
@@ -75,6 +78,16 @@ public class CharacterMovement : MonoBehaviour
 			animator.CrossFade("Punch", crossFade, -1, 0f);
 			punchEm.DoAttack("Punch", controller.IsFacingRight());
 		}
+
+		if (Input.GetButtonDown("Fire2"))
+		{
+			receiveDamage.receiveDamage(100);
+		}
+
+        if (Input.GetButtonDown("Pause"))
+        {
+			GameManager.Instance.GetPauseMenu();
+        }
 	}
 
 	public void OnLanding ()
