@@ -30,6 +30,13 @@ public class GameManager : Singleton<GameManager>
     private GameObject pauseMenu;
     private GameObject optionsMenu;
 
+    private void Update() {
+        if (Input.GetButtonDown("Pause"))
+        {
+            this.GetPauseMenu();
+        }
+    }
+
     public void ChangeState(GameState state)
     {
         if (gameState != state) { gameState = state; }
