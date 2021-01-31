@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject menuPrefab;
     public GameObject creditsPrefab;
 
+    [HideInInspector]
     SceneHandler sceneHandler;
     public Canvas canvas;
     

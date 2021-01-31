@@ -15,7 +15,6 @@ public class DialogHandler : MonoBehaviour
 
     void Start()
     {
-        DialogStart();
     }
 
     public void DialogStart()
