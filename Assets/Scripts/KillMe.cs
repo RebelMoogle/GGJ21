@@ -8,4 +8,16 @@ public class KillMe : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public void KillLater(float timeToDie)
+    {
+        StartCoroutine(KillTimer(timeToDie));
+    }
+
+    IEnumerator KillTimer(float timeToDie)
+    {
+        yield return new WaitForSeconds(timeToDie);
+
+        Destroy(gameObject);
+    }
 }
