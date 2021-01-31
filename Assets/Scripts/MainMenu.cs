@@ -18,17 +18,19 @@ public class MainMenu : MonoBehaviour
 
         sceneHandler = GetComponent<SceneHandler>();
 
-        Button startButton = menu.transform.GetChild(2).GetChild(0).GetComponent<Button>();
-        startButton.onClick.AddListener(StartGame);
-        Button creditsButton = menu.transform.GetChild(2).GetChild(1).GetComponent<Button>(); // I'm hardcoding the button values because I don't expect our prefab to change (much)
+        Button vsAIButton = menu.transform.GetChild(2).GetChild(0).GetComponent<Button>();
+        vsAIButton.onClick.AddListener(delegate { StartGame(1); });
+        Button vs2PButton = menu.transform.GetChild(2).GetChild(1).GetComponent<Button>();
+        vs2PButton.onClick.AddListener(delegate { StartGame(2); });
+        Button creditsButton = menu.transform.GetChild(2).GetChild(2).GetComponent<Button>(); // I'm hardcoding the button values because I don't expect our prefab to change (much)
         creditsButton.onClick.AddListener(ShowCredits);
-        Button exitButton = menu.transform.GetChild(2).GetChild(2).GetComponent<Button>(); // If we change the buttons in the menu around these references need to be rewritten
+        Button exitButton = menu.transform.GetChild(2).GetChild(3).GetComponent<Button>(); // If we change the buttons in the menu around these references need to be rewritten
         exitButton.onClick.AddListener(ExitGame);
     }
 
-    public void StartGame()
+    public void StartGame(int scene)
     {
-        sceneHandler.LoadScene(1);
+            sceneHandler.LoadScene(scene);
     }
 
     public void ShowCredits()

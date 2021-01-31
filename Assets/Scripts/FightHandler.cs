@@ -23,6 +23,8 @@ public class FightHandler : MonoBehaviour
     [HideInInspector]
     SceneHandler sceneHandler;
 
+    public bool VsAI;
+
     void Start()
     {
         dialogHandler = GetComponent<DialogHandler>();
@@ -171,8 +173,15 @@ public class FightHandler : MonoBehaviour
     IEnumerator NextRoundTimer()
     {
         yield return new WaitForSeconds(2.5f);
-        
-        sceneHandler.LoadScene(1);
+        if (VsAI)
+        {
+            sceneHandler.LoadScene(1);
+        }
+        if (!VsAI)
+        {
+            sceneHandler.LoadScene(2);
+        }
+
     }
 
     IEnumerator EndTimer()
