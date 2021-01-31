@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class PunchEm : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class PunchEm : MonoBehaviour
                     }
                 }
             };
+            if(chosenAtk.soundClip != string.Empty) { FMODUnity.RuntimeManager.PlayOneShot(chosenAtk.soundClip); }
         } else {
             Debug.Log($"Attack with name {attackName} not found");
         }

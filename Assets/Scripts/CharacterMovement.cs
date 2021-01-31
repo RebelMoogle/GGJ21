@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -45,11 +46,13 @@ public class CharacterMovement : MonoBehaviour
 		{
 			jump = true;
 			animator.SetBool("IsJumping", true);
+			RuntimeManager.PlayOneShot("event:/Character/Jump");
 		}
 
 		if (Input.GetButtonDown("Crouch"))
 		{
 			crouch = true;
+			RuntimeManager.PlayOneShot("event:/Character/crouch");
 		} else if (Input.GetButtonUp("Crouch"))
 		{
 			crouch = false;
@@ -65,6 +68,11 @@ public class CharacterMovement : MonoBehaviour
 		{
 			receiveDamage.receiveDamage(100);
 		}
+
+        if (Input.GetButtonDown("Pause"))
+        {
+			GameManager.Instance.GetPauseMenu();
+        }
 	}
 
 	public void OnLanding ()

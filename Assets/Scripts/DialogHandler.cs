@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogHandler : MonoBehaviour
@@ -12,6 +13,8 @@ public class DialogHandler : MonoBehaviour
     
     public CharacterQuips playerOne;
     public CharacterQuips playerTwo;
+
+    public UnityEvent afterStartQuipEvent;
 
     void Start()
     {
@@ -30,6 +33,8 @@ public class DialogHandler : MonoBehaviour
         yield return new WaitForSeconds(2.1f);
 
         Quip(playerTwo, quipRightPrefab, "start");
+
+        afterStartQuipEvent.Invoke();
     }
 
     public void DialogWinRound()

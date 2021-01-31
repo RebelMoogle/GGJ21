@@ -8,10 +8,150 @@
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000268B5A593C8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001C161647158 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] SystemI::createSound                     : filename = Assets\20210130 Global Game jam Jan 2021_FMOD implementation\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C37D47B718 : node = 000001C1613BBA30
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C16B297B68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C37D47B718
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\20210130 Global Game jam Jan 2021_FMOD implementation\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3230944
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C1613BBB40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='20210130 global game jam jan 2021_main theme_m m', format=5, channels=2, frequency=48000, lengthbytes=696928, lengthpcm=2293720, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975033.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C37D47B718
+[LOG] SystemI::createSound                     : filename = Assets\20210130 Global Game jam Jan 2021_FMOD implementation\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C33BCCD218 : node = 000001C339F07B60
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C16B297B68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C33BCCD218
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\20210130 Global Game jam Jan 2021_FMOD implementation\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3230944
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C339F07C70
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='BAR un express! caisse proche conversation tiercé FRA6200-34', format=5, channels=2, frequency=48000, lengthbytes=864768, lengthpcm=3179520, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.465332.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C33BCCD218
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C33BCCE9B8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C33BCCE9B8
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3230944
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006B3678F538
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A1367B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A1367AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A1367BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A1367CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C33831E358
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='20210130_Global Game Jam Jan 2021_Audio_SFX Design_1.0_2021-01-30 17-46-03_Punch', format=5, channels=2, frequency=48000, lengthbytes=11616, lengthpcm=53307, pcmblocksize=0, loopstart=0, loopend=53210, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.888152.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3230944
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006B3678F538
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A1367B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A1367AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A1367BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A1367CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C37D7F1038
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='20210130_Global Game Jam Jan 2021_Audio_SFX Design_1.0_2021-01-30 17-46-03_Crouch', format=5, channels=2, frequency=48000, lengthbytes=3936, lengthpcm=53307, pcmblocksize=0, loopstart=0, loopend=53210, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.126286.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 3230944
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006B3678F538
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FF8A1367B10
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FF8A1367AE0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FF8A1367BE0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FF8A1367CA0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001C37D7F1878
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='20210130_Global Game Jam Jan 2021_Audio_SFX Design_1.0_2021-01-30 17-46-03_Jump', format=5, channels=2, frequency=48000, lengthbytes=2304, lengthpcm=53307, pcmblocksize=0, loopstart=0, loopend=53210, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.687301.
+[LOG] SystemI::createSound                     : filename = Assets\20210130 Global Game jam Jan 2021_FMOD implementation\Build\Desktop/Master.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000001C16183AEB8 : node = 000001C339F07520
+[LOG] SystemI::createSound                     : add node to async list : head = 000001C16B297B68.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001C16183AEB8
+[LOG] SystemI::createSoundInternal             :     Create name='Assets\20210130 Global Game jam Jan 2021_FMOD implementation\Build\Desktop/Master.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 3230944
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 24128
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001C339F07630
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 1125
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='20210130 global game jam jan 2021_main theme_m m', format=5, channels=2, frequency=48000, lengthbytes=696928, lengthpcm=2293720, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975033.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001C16183AEB8
+[LOG] SoundI::release                          : 20210130 global game jam jan 2021_main theme_m m (000001C37D47B718)
+[LOG] SoundI::release                          :     20210130 global game jam jan 2021_main theme_m m (000001C339AD1B88)
+[LOG] SoundI::release                          :     20210130 global game jam jan 2021_main theme_m m (000001C37D47B8C8)
+[LOG] SoundI::release                          : BAR un express! caisse proche conversation tiercé FRA6200-34 (000001C33BCCD218)
+[LOG] SoundI::release                          :     BAR un express! caisse proche conversation tiercé FRA6200-34 (000001C339AD19E8)
+[LOG] SoundI::release                          :     BAR un express! caisse proche conversation tiercé FRA6200-34 (000001C33BCCE9B8)
+[LOG] SoundI::release                          : BAR rangement flipper téléphone FRA6200-35 (000001C3383E4D08)
+[LOG] SoundI::release                          :     BAR rangement flipper téléphone FRA6200-35 (000001C1620E6118)
+[LOG] SoundI::release                          :     BAR rangement flipper téléphone FRA6200-35 (000001C3383E4EB8)
+[LOG] SoundI::release                          : 20210130 global game jam jan 2021_main theme_m m (000001C16183AEB8)
+[LOG] SoundI::release                          :     20210130 global game jam jan 2021_main theme_m m (000001C339AD1028)
+[LOG] SoundI::release                          :     20210130 global game jam jan 2021_main theme_m m (000001C16183A648)
+[LOG] SoundI::release                          :  (000001C176C2F238)
+[LOG] SoundI::release                          :     20210130_Global Game Jam Jan 2021_Audio_SFX Design_1.0_2021-01-30 17-46-03_Crouch (000001C339AD23A8)
+[LOG] SoundI::release                          :  (000001C338510388)
+[LOG] SoundI::release                          :     20210130_Global Game Jam Jan 2021_Audio_SFX Design_1.0_2021-01-30 17-46-03_Punch (000001C339AD16A8)
+[LOG] SoundI::release                          :  (000001C176C2F3A8)
+[LOG] SoundI::release                          :     20210130_Global Game Jam Jan 2021_Audio_SFX Design_1.0_2021-01-30 17-46-03_Jump (000001C339AD26E8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] FMOD_OS_Net_Read                         : Interrupted.[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

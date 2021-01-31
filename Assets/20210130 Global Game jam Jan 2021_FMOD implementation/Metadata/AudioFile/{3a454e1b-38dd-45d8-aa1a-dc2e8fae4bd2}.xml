@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{3a454e1b-38dd-45d8-aa1a-dc2e8fae4bd2}">
+		<property name="assetPath">
+			<value>20210130_Global Game Jam Jan 2021_Audio_SFX Design_1.0_2021-01-30 17-46-03_Blow a Kiss.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.1105668934240362</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c558c9a3-06b1-4fbb-9840-e8b57a74214e}</destination>
+		</relationship>
+	</object>
+</objects>
