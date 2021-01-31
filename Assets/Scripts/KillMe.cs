@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class KillMe : MonoBehaviour
 {
+    public bool isKill;
+    [Range(0.1f,3f)]
+    public float killMeWhen = 1f;
+
+    void Start()
+    {
+        if (isKill)
+        {
+            StartCoroutine(KillTimer(killMeWhen));
+        }
+    }
+
     public void Kill()
     {
         Destroy(gameObject);
