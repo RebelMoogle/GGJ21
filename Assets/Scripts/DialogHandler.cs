@@ -102,8 +102,11 @@ public class DialogHandler : MonoBehaviour
 
         GameObject characterQuip = Instantiate(quipType, canvas.transform);
 
-        Sprite characterSprite = characterQuip.transform.GetChild(0).GetComponent<Sprite>();
-        characterSprite = character.characterSplash;
+        //I couldn't get the sprite to swap, so I just defined it in the Prefab
+
+        //SpriteRenderer characterSprite = characterQuip.transform.GetChild(0).GetComponent<SpriteRenderer>();
+        //characterSprite.sprite = character.characterSplash;
+
         Text characterName = characterQuip.transform.GetChild(2).GetChild(0).GetComponent<Text>();
         characterName.text = character.characterName;
 
