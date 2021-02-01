@@ -14,7 +14,8 @@ public class ReceiveDamage : MonoBehaviour
 {
 
 
-    public const int startHealth = 100;
+    [SerializeField]
+    private int startHealth = 100;
     
     [Range(0.0f, 1.0f)]
     public const float LowHealth = 0.25f;
@@ -22,9 +23,10 @@ public class ReceiveDamage : MonoBehaviour
     public class DamageEvent : UnityEvent<HealthState> {}
     public DamageEvent damageEvent;
 
-    private int currentHealth = startHealth;
+    private int currentHealth = 100;
 
     public int CurrentHealth { get => currentHealth; }
+    public int StartHealth {get => startHealth; }
 
     private void Awake() {
         if (damageEvent == null) {

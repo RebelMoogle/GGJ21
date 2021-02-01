@@ -18,9 +18,11 @@ public class PunchEm : MonoBehaviour
         }
     }
 
-    public bool DoAttack(string attackName, bool facingRight) {
+    public bool DoAttack(string attackName, bool facingRight, Animator animator, float crossFade) {
 
         if(namedAttacks.TryGetValue(attackName, out Attack chosenAtk)) {
+
+            animator.CrossFade(chosenAtk.animationName, crossFade, -1, 0f);
             
             Vector2 forward = facingRight ? Vector2.right : Vector2.left;
             Vector2 startPosition = chosenAtk.origin.position;

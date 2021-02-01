@@ -27,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
 	string jumpInput = "Jump";
 	string crouchInput = "Crouch";
 	string attackInput1 = "Punch";
+	string attackInput2 = "Kick";
 
 
 
@@ -88,8 +89,11 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetButtonDown(attackInput1))
 		{
-			animator.CrossFade("Punch", crossFade, -1, 0f);
-			punchEm.DoAttack("Punch", controller.IsFacingRight());
+			punchEm.DoAttack("Punch", controller.IsFacingRight(), animator, crossFade);
+		}
+		if (Input.GetButtonDown(attackInput2))
+		{
+			punchEm.DoAttack("Kick", controller.IsFacingRight(), animator, crossFade);
 		}
 
 		if (Input.GetButtonDown("Fire2"))
@@ -118,12 +122,12 @@ public class CharacterMovement : MonoBehaviour
         animator.CrossFade("Damaged", crossFade, -1, 0f);
 		if (healthState == HealthState.Knockout) {
 			animator.CrossFade("KnockOut", crossFade);
+			// TODO: turn colliders off.
 		}
     }
 
 	void FixedUpdate ()
 	{
-
 		// Move our character
 		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
 		jump = false;

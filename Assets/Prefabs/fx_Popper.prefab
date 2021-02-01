@@ -115,4 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isKill: 1
-  killMeWhen: 2.5
+  killMeWhen: 1
