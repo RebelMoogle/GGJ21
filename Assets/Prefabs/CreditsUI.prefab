@@ -90,6 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78ae2c050f1d934b8a9444a1d76f668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isKill: 0
+  killMeWhen: 1
 --- !u!1 &757882585153252299
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,27 +371,25 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'AdamRickert
+  m_Text: 'Kyle Chang: SFX and Music
 
-    John ''RebelChillin''
+    Adam Rickert: Character Art
 
-    Mr.Game and Audio
+    Christian:
+    Visual Design
 
-    DigitalLit
+    John RebelChillin: Coding
 
-    Kyle
+    Kaylin: Coding
 
-    Paxton
-
-
-    (all
-    names taken directly from Discord, please replace before shipping final game)'
+    Paxton:
+    Coding, Writing'
 --- !u!1 &757882586580249517
 GameObject:
   m_ObjectHideFlags: 0
