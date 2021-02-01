@@ -8,8 +8,10 @@ public class FightHandler : MonoBehaviour
     public int round;
     public GameObject playerOnePrefab;
     private ReceiveDamage playerOneDamage;
+    public healthBar playerOneHP;
     public GameObject playerTwoPrefab;
     private ReceiveDamage playerTwoDamage;
+    public healthBar playerTwoHP;
     [HideInInspector]
     public int playerOneState;
     [HideInInspector]
@@ -100,8 +102,10 @@ public class FightHandler : MonoBehaviour
     {
         GameObject playerOne = Instantiate(playerOnePrefab);
         playerOneDamage = playerOne.GetComponent<ReceiveDamage>();
+        playerOneHP.player = playerOne;
         GameObject playerTwo = Instantiate(playerTwoPrefab);
         playerTwoDamage = playerTwo.GetComponent<ReceiveDamage>();
+        playerTwoHP.player = playerTwo;
     }
 
     public void EndRound(int loser)
