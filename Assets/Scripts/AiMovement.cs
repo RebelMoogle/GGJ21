@@ -16,6 +16,7 @@ public class AiMovement : MonoBehaviour
 
     public bool isJumping = false;
     public bool isPunching = false;
+    public bool isKicking = false;
 
     public bool startFlipped = true;
 
@@ -74,6 +75,11 @@ public class AiMovement : MonoBehaviour
         {
             punchEm.DoAttack("Punch", controller.IsFacingRight(), animator, crossFade);
         }
+
+        if (isKicking)
+        {
+            punchEm.DoAttack("Kick", controller.IsFacingRight(), animator, crossFade);
+        }
     }
 
     public void OnLanding ()
@@ -91,6 +97,7 @@ public class AiMovement : MonoBehaviour
         animator.CrossFade("Damaged", crossFade, -1, 0f);
 		if (healthState == HealthState.Knockout) {
 			animator.CrossFade("KnockOut", crossFade);
+            // TODO: turn colliders off.
 		}
     }
 

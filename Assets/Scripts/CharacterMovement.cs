@@ -25,6 +25,7 @@ public class CharacterMovement : MonoBehaviour
 	string jumpInput = "Jump";
 	string crouchInput = "Crouch";
 	string attackInput1 = "Punch";
+	string attackInput2 = "Kick";
 
 
 
@@ -74,6 +75,10 @@ public class CharacterMovement : MonoBehaviour
 		{
 			punchEm.DoAttack("Punch", controller.IsFacingRight(), animator, crossFade);
 		}
+		if (Input.GetButtonDown(attackInput2))
+		{
+			punchEm.DoAttack("Kick", controller.IsFacingRight(), animator, crossFade);
+		}
 	}
 
 	public void OnLanding ()
@@ -91,6 +96,7 @@ public class CharacterMovement : MonoBehaviour
         animator.CrossFade("Damaged", crossFade, -1, 0f);
 		if (healthState == HealthState.Knockout) {
 			animator.CrossFade("KnockOut", crossFade);
+			// TODO: turn colliders off.
 		}
     }
 
