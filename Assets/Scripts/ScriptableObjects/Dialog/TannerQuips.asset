@@ -13,19 +13,22 @@ MonoBehaviour:
   m_Name: TannerQuips
   m_EditorClassIdentifier: 
   characterName: Tanner
-  characterSplash: {fileID: 21300000, guid: 79302d43bcadd7749986b320d30cc8e8, type: 3}
+  characterSplash: {fileID: 21300000, guid: a9926cef8cbf5b143a796c9872502ab9, type: 3}
   introductions:
   - Hey there. Come here often? Let me show you around.
   - You look a llittle lost. Let me show you the ropes.
+  - 'Hello stranger, '
   nakedResponses:
   - Now things are getting interesting.
   - Is it getting hot in here, or is it just me?
+  - You seem to have caught me at a disadvantage, for the moment.
   defeatResponses:
   - I'm impressed, want to go again?
   - What a ride, ready for a rematch?
   seducingResponses:
   - Look what I found! A tender area.
   - Oops, you dropped something.
+  - Aww, do you need help getting up?
   victoryResponses:
   - I thought you'd last longer than that.
   - if that's all I'll be at the bar.

@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestScence_paxton.unity
-    guid: 0cab9d6d74d5f9c4d814583279fe7138
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 040ef5598c3a98f41a2a6f75177956b0
   - enabled: 1
     path: Assets/Scenes/Fight_AI_Shipping.unity
     guid: 66113cff4d4b17f429b0a61e2c73213f
