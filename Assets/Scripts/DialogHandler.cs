@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogHandler : MonoBehaviour
@@ -12,6 +13,9 @@ public class DialogHandler : MonoBehaviour
     
     public CharacterQuips playerOne;
     public CharacterQuips playerTwo;
+
+    public UnityEvent afterStartQuipEvent;
+
 
     void Start()
     {
@@ -29,11 +33,14 @@ public class DialogHandler : MonoBehaviour
         yield return new WaitForSeconds(2.1f);
 
         Quip(playerTwo, quipRightPrefab, "start");
+
+        afterStartQuipEvent.Invoke();
     }
 
     public void DialogWinRound()
     {
         StartCoroutine(PlayerWonRoundQuips());
+        AudioController.Instance.StopMusic(true);
     }
 
     IEnumerator PlayerWonRoundQuips()
@@ -48,6 +55,7 @@ public class DialogHandler : MonoBehaviour
     public void DialogLostRound()
     {
         StartCoroutine(PlayerLostRoundQuips());
+        AudioController.Instance.StopMusic(true);
     }
 
     IEnumerator PlayerLostRoundQuips()
@@ -62,6 +70,7 @@ public class DialogHandler : MonoBehaviour
     public void DialogWonMatch()
     {
         StartCoroutine(PlayerWonMatchQuips());
+        AudioController.Instance.StopMusic(true);
     }
 
     IEnumerator PlayerWonMatchQuips()
@@ -76,6 +85,7 @@ public class DialogHandler : MonoBehaviour
     public void DialogLostMatch()
     {
         StartCoroutine(PlayerLostMatchQuips());
+        AudioController.Instance.StopMusic(true);
     }
 
     IEnumerator PlayerLostMatchQuips()

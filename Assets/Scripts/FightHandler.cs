@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FightHandler : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class FightHandler : MonoBehaviour
     SceneHandler sceneHandler;
 
     public bool VsAI;
+
+    public UnityEvent roundOneStartEvents;
+    public UnityEvent roundTwoStartEvents;
+    public UnityEvent roundThreeStartEvents;
 
     void Start()
     {
@@ -85,15 +90,18 @@ public class FightHandler : MonoBehaviour
             case 3:
                 //Final round
                 SpawnPlayers();
+                roundThreeStartEvents.Invoke();
                 break;
             case 2:
                 //2nd round
                 SpawnPlayers();
+                roundTwoStartEvents.Invoke();
                 break;
             default:
                 //1st round
                 dialogHandler.DialogStart();
                 SpawnPlayers();
+                roundOneStartEvents.Invoke();
                 break;
         }
     }
