@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FightHandler : MonoBehaviour
 {
@@ -8,8 +9,10 @@ public class FightHandler : MonoBehaviour
     public int round;
     public GameObject playerOnePrefab;
     private ReceiveDamage playerOneDamage;
+    public healthBar playerOneHP;
     public GameObject playerTwoPrefab;
     private ReceiveDamage playerTwoDamage;
+    public healthBar playerTwoHP;
     [HideInInspector]
     public int playerOneState;
     [HideInInspector]
@@ -24,6 +27,10 @@ public class FightHandler : MonoBehaviour
     SceneHandler sceneHandler;
 
     public bool VsAI;
+
+    public UnityEvent roundOneStartEvents;
+    public UnityEvent roundTwoStartEvents;
+    public UnityEvent roundThreeStartEvents;
 
     void Start()
     {
@@ -83,15 +90,18 @@ public class FightHandler : MonoBehaviour
             case 3:
                 //Final round
                 SpawnPlayers();
+                roundThreeStartEvents.Invoke();
                 break;
             case 2:
                 //2nd round
                 SpawnPlayers();
+                roundTwoStartEvents.Invoke();
                 break;
             default:
                 //1st round
                 dialogHandler.DialogStart();
                 SpawnPlayers();
+                roundOneStartEvents.Invoke();
                 break;
         }
     }
@@ -100,8 +110,16 @@ public class FightHandler : MonoBehaviour
     {
         GameObject playerOne = Instantiate(playerOnePrefab);
         playerOneDamage = playerOne.GetComponent<ReceiveDamage>();
+        playerOneHP.player = playerOne;
+
+
         GameObject playerTwo = Instantiate(playerTwoPrefab);
         playerTwoDamage = playerTwo.GetComponent<ReceiveDamage>();
+        playerTwoHP.player = playerTwo;
+        if (!VsAI)
+        {
+            playerTwo.GetComponent<CharacterMovement>().playerNumber = 2;
+        }
     }
 
     public void EndRound(int loser)

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
 	public ReceiveDamage receiveDamage;
 	public PunchEm punchEm;
 	public Animator animator;
+	public StudioEventEmitter walksound;
 
 	[Range(1,2)]
 	public int playerNumber = 1;
@@ -30,6 +32,7 @@ public class CharacterMovement : MonoBehaviour
 
 
     private void Start() {
+		walksound = GetComponent<StudioEventEmitter>();
         controller.OnLandEvent.AddListener(this.OnLanding);
         controller.OnCrouchEvent.AddListener(this.OnCrouching);
 		receiveDamage.damageEvent.AddListener(this.OnDamage);
@@ -57,16 +60,29 @@ public class CharacterMovement : MonoBehaviour
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+		if (horizontalMove == 0 || walksound.IsPlaying())
+        {
+			Debug.Log("walk stopped");
+			walksound.Stop();
+        }
+        else
+        {
+			Debug.Log("walk playing");
+			walksound.Play();
+        }
+
 		if (Input.GetButtonDown(jumpInput))
 		{
 			jump = true;
 			animator.SetBool("IsJumping", true);
+			AudioController.Instance.PlayOneshotClip("jump");
 		}
 
 		if (Input.GetButtonDown(crouchInput))
 		{
 			crouch = true;
-		} else if (Input.GetButtonUp(crouchInput))
+			AudioController.Instance.PlayOneshotClip("crouch");
+		} else if (Input.GetButtonUp("Crouch"))
 		{
 			crouch = false;
 		}
@@ -79,6 +95,16 @@ public class CharacterMovement : MonoBehaviour
 		{
 			punchEm.DoAttack("Kick", controller.IsFacingRight(), animator, crossFade);
 		}
+
+		if (Input.GetButtonDown("Fire2"))
+		{
+			receiveDamage.receiveDamage(100);
+		}
+
+        if (Input.GetButtonDown("Pause"))
+        {
+			GameManager.Instance.GetPauseMenu();
+        }
 	}
 
 	public void OnLanding ()

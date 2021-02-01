@@ -1512,6 +1512,7 @@ GameObject:
   - component: {fileID: 6116661540089332504}
   - component: {fileID: 6766105734107358786}
   - component: {fileID: 3441970242092016218}
+  - component: {fileID: 8307446439907765419}
   m_Layer: 0
   m_Name: testCharMirror 1
   m_TagString: Player
@@ -1669,6 +1670,7 @@ MonoBehaviour:
   receiveDamage: {fileID: 6766105734107358786}
   punchEm: {fileID: 3441970242092016218}
   animator: {fileID: 6116661540089332516}
+  walksound: {fileID: 0}
   playerNumber: 1
   crossFade: 0.2
   runSpeed: 40
