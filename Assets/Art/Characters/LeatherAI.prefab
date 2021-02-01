@@ -2587,12 +2587,14 @@ MonoBehaviour:
     areaOfEffect: 0.2
     damage: 10
     origin: {fileID: 8344250873454713107}
+    soundClip: 
   - attackName: Kick
     animationName: Kick
     range: 3
     areaOfEffect: 0.2
     damage: 10
     origin: {fileID: 6142333242287843411}
+    soundClip: 
 --- !u!114 &729907319013124647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2651,10 +2653,11 @@ MonoBehaviour:
   animator: {fileID: 729907319013124650}
   crossFade: 0.2
   runSpeed: 40
-  isJumping: 1
+  isJumping: 0
   isPunching: 1
+  isKicking: 0
   startFlipped: 1
-  stepSpeed: 1
+  stepSpeed: -0.1
   RepeatActionTime: 1
 --- !u!1 &3000022666419038598
 GameObject:
