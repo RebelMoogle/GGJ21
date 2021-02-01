@@ -1,0 +1,17 @@
+{
+"companyName": "DefaultCompany",
+"productName": "GGJ21",
+"productVersion": "0.1",
+"dataUrl": "GGK21Build.data.unityweb",
+"wasmCodeUrl": "GGK21Build.wasm.code.unityweb",
+"wasmFrameworkUrl": "GGK21Build.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "GGK21Build.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.18f1"
+}
