@@ -103,9 +103,15 @@ public class FightHandler : MonoBehaviour
         GameObject playerOne = Instantiate(playerOnePrefab);
         playerOneDamage = playerOne.GetComponent<ReceiveDamage>();
         playerOneHP.player = playerOne;
+
+
         GameObject playerTwo = Instantiate(playerTwoPrefab);
         playerTwoDamage = playerTwo.GetComponent<ReceiveDamage>();
         playerTwoHP.player = playerTwo;
+        if (!VsAI)
+        {
+            playerTwo.GetComponent<CharacterMovement>().playerNumber = 2;
+        }
     }
 
     public void EndRound(int loser)
