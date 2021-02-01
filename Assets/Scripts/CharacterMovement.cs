@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
 
 
     private void Start() {
-		//walksound = GetComponent<StudioEventEmitter>();
+		walksound = GetComponent<StudioEventEmitter>();
         controller.OnLandEvent.AddListener(this.OnLanding);
         controller.OnCrouchEvent.AddListener(this.OnCrouching);
 		receiveDamage.damageEvent.AddListener(this.OnDamage);
@@ -59,6 +59,17 @@ public class CharacterMovement : MonoBehaviour
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+		if (horizontalMove == 0 || walksound.IsPlaying())
+        {
+			Debug.Log("walk stopped");
+			walksound.Stop();
+        }
+        else
+        {
+			Debug.Log("walk playing");
+			walksound.Play();
+        }
+
 		if (Input.GetButtonDown(jumpInput))
 		{
 			jump = true;
@@ -69,7 +80,7 @@ public class CharacterMovement : MonoBehaviour
 		if (Input.GetButtonDown(crouchInput))
 		{
 			crouch = true;
-			RuntimeManager.PlayOneShot("event:/Character/crouch");
+			AudioController.Instance.PlayOneshotClip("crouch");
 		} else if (Input.GetButtonUp("Crouch"))
 		{
 			crouch = false;
@@ -79,7 +90,6 @@ public class CharacterMovement : MonoBehaviour
 		{
 			animator.CrossFade("Punch", crossFade, -1, 0f);
 			punchEm.DoAttack("Punch", controller.IsFacingRight());
-			AudioController.Instance.PlayOneshotClip("punch");
 		}
 
 		if (Input.GetButtonDown("Fire2"))

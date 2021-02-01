@@ -1670,6 +1670,7 @@ MonoBehaviour:
   receiveDamage: {fileID: 6766105734107358786}
   punchEm: {fileID: 3441970242092016218}
   animator: {fileID: 6116661540089332516}
+  walksound: {fileID: 0}
   playerNumber: 1
   crossFade: 0.2
   runSpeed: 40
@@ -1732,7 +1733,7 @@ MonoBehaviour:
     areaOfEffect: 0.1
     damage: 10
     origin: {fileID: 2785153125212705917}
-    soundClip: 
+    soundClip: punch
 --- !u!114 &8307446439907765419
 MonoBehaviour:
   m_ObjectHideFlags: 0

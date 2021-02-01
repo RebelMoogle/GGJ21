@@ -5,8 +5,11 @@ using FMODUnity;
 
 public class AudioController : Singleton<AudioController>
 {
+    public StringStringDictionary musicClipList; //Key: clip name | Value: eventPath
 
     public StringStringDictionary soundClipList; //Key: clip name | Value: eventPath
+
+    private StudioEventEmitter musicEmitter;
 
     // Start is called before the first frame update
     void Start()
@@ -35,4 +38,20 @@ public class AudioController : Singleton<AudioController>
         soundInstance.release();
     }
 
+    public void PlayMusic(string songName)
+    {
+        if(musicEmitter == null)
+        {
+            musicEmitter = gameObject.AddComponent<StudioEventEmitter>();
+        }
+        musicEmitter.Event = musicClipList[songName];
+
+        musicEmitter.Play();
+    } 
+
+    public void StopMusic(bool fadeOut)
+    {
+        musicEmitter.AllowFadeout = fadeOut;
+        musicEmitter.Stop();
+    }
 }
