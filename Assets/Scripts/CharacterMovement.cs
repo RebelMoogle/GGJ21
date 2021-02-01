@@ -60,16 +60,16 @@ public class CharacterMovement : MonoBehaviour
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-		if (horizontalMove == 0 || walksound.IsPlaying())
-        {
-			Debug.Log("walk stopped");
-			walksound.Stop();
-        }
-        else
-        {
-			Debug.Log("walk playing");
-			walksound.Play();
-        }
+		if (walksound) {
+					if (horizontalMove == 0 || walksound.IsPlaying())
+			{
+				walksound.Stop();
+			}
+			else
+			{
+				walksound.Play();
+			}
+		}
 
 		if (Input.GetButtonDown(jumpInput))
 		{
@@ -94,11 +94,6 @@ public class CharacterMovement : MonoBehaviour
 		if (Input.GetButtonDown(attackInput2))
 		{
 			punchEm.DoAttack("Kick", controller.IsFacingRight(), animator, crossFade);
-		}
-
-		if (Input.GetButtonDown("Fire2"))
-		{
-			receiveDamage.receiveDamage(100);
 		}
 
         if (Input.GetButtonDown("Pause"))

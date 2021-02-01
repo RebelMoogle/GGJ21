@@ -488,7 +488,7 @@ MonoBehaviour:
   - {fileID: 3165131564133168782}
   StringsBanks:
   - {fileID: 5351264789474646878}
-  stringsBankWriteTime: 637477098243341833
+  stringsBankWriteTime: 637477095166385185
   cacheVersion: 6
 --- !u!114 &915603051887137389
 MonoBehaviour:
@@ -706,7 +706,7 @@ MonoBehaviour:
   Path: Assets/20210130 Global Game jam Jan 2021_FMOD implementation/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637477098243321851
+  lastModified: 637477095166375179
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -852,7 +852,7 @@ MonoBehaviour:
   Path: Assets/20210130 Global Game jam Jan 2021_FMOD implementation/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637477098243341833
+  lastModified: 637477095166385185
   LoadResult: 0
   FileSizes:
   - Name: 

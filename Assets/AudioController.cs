@@ -51,6 +51,10 @@ public class AudioController : Singleton<AudioController>
 
     public void StopMusic(bool fadeOut)
     {
+        if(musicEmitter == null)
+        {
+            musicEmitter = gameObject.AddComponent<StudioEventEmitter>();
+        }
         musicEmitter.AllowFadeout = fadeOut;
         musicEmitter.Stop();
     }
