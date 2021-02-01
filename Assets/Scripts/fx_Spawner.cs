@@ -21,28 +21,24 @@ public class fx_Spawner : MonoBehaviour
         
     }
 
-    public void SpawnFXJump()
+    public void SpawnFXJump(Transform transform)
     {
-        GameObject jump = Instantiate(jumpPrefab);
-        //TODO: set position of the object
+        GameObject jump = Instantiate(jumpPrefab, transform.position, transform.rotation);
     }
 
-    public void SpawnFXLand()
+    public void SpawnFXLand(Transform transform)
     {
-        GameObject jump = Instantiate(jumpPrefab);
-        //TODO: set position of the object
+        GameObject jump = Instantiate(jumpPrefab,  transform.position, transform.rotation);
     }
 
-    public void SpawnFXFall()
+    public void SpawnFXFall(Transform transform)
     {
-        GameObject jump = Instantiate(jumpPrefab);
-        //TODO: set position of the object
+        GameObject jump = Instantiate(jumpPrefab,  transform.position, transform.rotation);
     }
 
-    public void SpawnFXHit()
+    public void SpawnFXHit(Transform transform)
     {
-        GameObject jump = Instantiate(jumpPrefab);
-        //TODO: set position of the object
+        GameObject jump = Instantiate(jumpPrefab,  transform.position, transform.rotation);
     }
 
     public void RandomSpawn()

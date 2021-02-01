@@ -44,7 +44,7 @@ public class PunchEm : MonoBehaviour
                 {
                     ReceiveDamage receiveDamage = collider.gameObject.GetComponent<ReceiveDamage>();
                     if (receiveDamage != null) {
-                        receiveDamage.receiveDamage(chosenAtk.damage);
+                        receiveDamage.receiveDamage(chosenAtk.damage, collider.transform);
                         return true;
                     }
                 }

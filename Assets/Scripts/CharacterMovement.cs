@@ -10,6 +10,14 @@ public class CharacterMovement : MonoBehaviour
 	public ReceiveDamage receiveDamage;
 	public PunchEm punchEm;
 	public Animator animator;
+
+	[SerializeField]
+	public GameObject groundPosition;
+
+	[SerializeField]
+	public GameObject AttackPosition;
+
+	private fx_Spawner spawnFX;
 	public StudioEventEmitter walksound;
 
 	[Range(1,2)]
@@ -36,6 +44,9 @@ public class CharacterMovement : MonoBehaviour
         controller.OnLandEvent.AddListener(this.OnLanding);
         controller.OnCrouchEvent.AddListener(this.OnCrouching);
 		receiveDamage.damageEvent.AddListener(this.OnDamage);
+
+		
+        spawnFX = this.GetComponent<fx_Spawner>();
 
 		if (playerNumber != 1) {
 			controller.Flip();
@@ -76,6 +87,7 @@ public class CharacterMovement : MonoBehaviour
 			jump = true;
 			animator.SetBool("IsJumping", true);
 			AudioController.Instance.PlayOneshotClip("jump");
+			spawnFX.SpawnFXJump(groundPosition.transform);
 		}
 
 		if (Input.GetButtonDown(crouchInput))
@@ -105,6 +117,7 @@ public class CharacterMovement : MonoBehaviour
 	public void OnLanding ()
 	{
 		animator.SetBool("IsJumping", false);
+		spawnFX.SpawnFXLand(groundPosition.transform);
 	}
 
 	public void OnCrouching (bool isCrouching)
@@ -112,12 +125,15 @@ public class CharacterMovement : MonoBehaviour
 		animator.SetBool("IsCrouching", isCrouching);
 	}
 
-	private void OnDamage(HealthState healthState)
+	private void OnDamage(HealthState healthState, Transform impact)
     {
         animator.CrossFade("Damaged", crossFade, -1, 0f);
 		if (healthState == HealthState.Knockout) {
 			animator.CrossFade("KnockOut", crossFade);
 			// TODO: turn colliders off.
+			spawnFX.SpawnFXFall(groundPosition.transform);
+		} else {
+			spawnFX.SpawnFXHit(impact);
 		}
     }
 

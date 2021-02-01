@@ -5377,6 +5377,8 @@ GameObject:
   - component: {fileID: 5497897232221427153}
   - component: {fileID: 5497897232221427154}
   - component: {fileID: 5497897232221427155}
+  - component: {fileID: 7326656452905194925}
+  - component: {fileID: -134301612907635491}
   m_Layer: 0
   m_Name: LeatherDaddy_v1
   m_TagString: Player
@@ -5547,12 +5549,14 @@ MonoBehaviour:
     areaOfEffect: 0.2
     damage: 10
     origin: {fileID: 3864626433990567653}
+    soundClip: 
   - attackName: Kick
     animationName: Kick
     range: 3
     areaOfEffect: 0.2
     damage: 10
     origin: {fileID: 1391789563394299813}
+    soundClip: 
 --- !u!114 &5497897232221427153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5582,6 +5586,9 @@ MonoBehaviour:
   receiveDamage: {fileID: 5497897232221427153}
   punchEm: {fileID: 5497897232221427152}
   animator: {fileID: 5497897232221427164}
+  groundPosition: {fileID: 5497897232202702820}
+  AttackPosition: {fileID: 6549736661087585015}
+  walksound: {fileID: -134301612907635491}
   playerNumber: 1
   crossFade: 0.2
   runSpeed: 40
@@ -5612,6 +5619,57 @@ MonoBehaviour:
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7326656452905194925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7976906809167839539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94699527910ed14bbaf02c01a429aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenSpawns: 3
+  fxTest: []
+  hitPrefab: {fileID: 8687123509191432011, guid: 9f88fcbd8882a2641b2989b654a335ca,
+    type: 3}
+  fallPrefab: {fileID: 5912396930594292840, guid: 4462dfc3dde05ad41bc6cbfa57c7beef,
+    type: 3}
+  jumpPrefab: {fileID: 6286578256650689294, guid: 8268475cf6b10e8488044fccdc76e2a6,
+    type: 3}
+  landPrefab: {fileID: 6495454910057425759, guid: 0ac4c28807aa7cd429bf80126d74fae2,
+    type: 3}
+  kissPrefab: {fileID: 5867072765532628079, guid: 64c9ddb6cbefe8b4da3101c6c993067c,
+    type: 3}
+  muskPrefab: {fileID: 5274176106781746956, guid: 9ba2fa71d67eadd409d40fe29480f067,
+    type: 3}
+  popperPrefab: {fileID: 8170690825149886432, guid: d4a1a9722915266418a08115551d2d3b,
+    type: 3}
+--- !u!114 &-134301612907635491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7976906809167839539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/SFX/walking
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &7992735867667391057
 GameObject:
   m_ObjectHideFlags: 0

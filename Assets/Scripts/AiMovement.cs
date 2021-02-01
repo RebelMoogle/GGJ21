@@ -92,7 +92,7 @@ public class AiMovement : MonoBehaviour
 		animator.SetBool("IsCrouching", isCrouching);
 	}
 
-	private void OnDamage(HealthState healthState)
+	private void OnDamage(HealthState healthState, Transform transform)
     {
         animator.CrossFade("Damaged", crossFade, -1, 0f);
 		if (healthState == HealthState.Knockout) {

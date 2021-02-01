@@ -13,14 +13,13 @@ public enum HealthState
 public class ReceiveDamage : MonoBehaviour
 {
 
-
     [SerializeField]
     private int startHealth = 100;
     
     [Range(0.0f, 1.0f)]
     public const float LowHealth = 0.25f;
 
-    public class DamageEvent : UnityEvent<HealthState> {}
+    public class DamageEvent : UnityEvent<HealthState, Transform> {}
     public DamageEvent damageEvent;
 
     private int currentHealth = 100;
@@ -45,7 +44,7 @@ public class ReceiveDamage : MonoBehaviour
         
     }
 
-    public int receiveDamage(int amount){
+    public int receiveDamage(int amount, Transform impact){
         
        currentHealth -= amount;
 
@@ -53,7 +52,7 @@ public class ReceiveDamage : MonoBehaviour
            // health 0 event event
            currentHealth = 0;
        }
-       damageEvent.Invoke(this.GetHealthState());
+       damageEvent.Invoke(this.GetHealthState(), impact);
 
        return currentHealth;
     }
